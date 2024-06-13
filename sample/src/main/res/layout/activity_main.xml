@@ -9,26 +9,43 @@
     <!-- Logo Image at the Top -->
 
     <!-- Shipper Reference Number Label and Input -->
+    <!-- Logo Image at the Top -->
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/efw_logo"
+        android:src="@drawable/efw_logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+    <!-- Shipper Reference Number Label and Input -->
     <TextView
         android:id="@+id/textViewShipRef"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="@string/shipper_reference"
-        app:layout_constraintStart_toStartOf="parent" />
-
+        android:text="@string/shipper_reference_no"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageViewLogo" />
     <EditText
         android:id="@+id/editTextShipRef"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Enter Shipper Reference #"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewShipRef"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="8dp" />
+        android:autofillHints=""
+        android:hint="@string/enter_shipper_reference"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewShipRef" />
+
 
     <!-- Existing Layout -->
     <LinearLayout
@@ -123,6 +140,6 @@
             android:layout_width="match_parent"
 
             android:layout_height="wrap_content"
-            android:text="Send Email" />
+            android:text="@string/send_email" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
