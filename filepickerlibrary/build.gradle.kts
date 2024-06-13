@@ -124,7 +124,7 @@ publishing {
 }
 
 detekt {
-    toolVersion = "1.23.1"
+    toolVersion = "1.23.6"
     config.setFrom("$projectDir/config/detekt/detekt.yml")
     buildUponDefaultConfig = true
 }
