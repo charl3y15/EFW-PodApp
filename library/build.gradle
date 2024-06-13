@@ -1,0 +1,48 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
+group='com.github.TutorialsAndroid'
+
+ext {
+    PUBLISH_GROUP_ID = 'io.github.tutorialsandroid'
+    PUBLISH_VERSION = '9.2.5'
+    PUBLISH_ARTIFACT_ID = 'filepicker'
+    PUBLISH_DESCRIPTION = 'Android Library to select files/directories from Device Storage'
+    PUBLISH_URL = 'https://github.com/TutorialsAndroid/FilePicker'
+    PUBLISH_LICENSE_NAME = 'Apache License'
+    PUBLISH_LICENSE_URL =
+            'https://github.com/TutorialsAndroid/FilePicker/blob/master/LICENSE'
+    PUBLISH_DEVELOPER_ID = 'tutorialsandroid'
+    PUBLISH_DEVELOPER_NAME = 'Akshay Masram'
+    PUBLISH_DEVELOPER_EMAIL = 'akshaysunilmasram@yahoo.com'
+    PUBLISH_SCM_CONNECTION =
+            'scm:git:github.com/tutorialsandroid/filepicker.git'
+    PUBLISH_SCM_DEVELOPER_CONNECTION =
+            'scm:git:ssh://github.com/tutorialsandroid/filepicker.git'
+    PUBLISH_SCM_URL =
+            'https://github.com/tutorialsandroid/filepicker/tree/master'
+}
+apply from: "${rootProject.projectDir}/scripts/publish-module.gradle"
+
+android {
+    compileSdk 34
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 34
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    namespace 'com.developer.filepicker'
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    lint {
+        abortOnError false
+    }
+}
