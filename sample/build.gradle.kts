@@ -109,14 +109,14 @@ dependencies {
 
     // testing
     testImplementation("junit:junit:4.13.2")
-    testImplementation("com.google.truth:truth:1.4.3")
+    testImplementation("com.google.truth:truth:1.4.4")
 
     androidTestImplementation("androidx.test.ext:junit-ktx:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     androidTestImplementation("androidx.test.espresso:espresso-contrib:3.5.1")
     androidTestImplementation("androidx.test.espresso:espresso-intents:3.5.1")
 
-    androidTestImplementation("com.google.truth:truth:1.4.3")
+    androidTestImplementation("com.google.truth:truth:1.4.4")
     androidTestImplementation("androidx.test:rules:1.6.1")
     androidTestImplementation("androidx.test.uiautomator:uiautomator:2.3.0")
     androidTestImplementation("androidx.arch.core:core-testing:2.2.0")
